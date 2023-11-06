@@ -1,2 +1,2 @@
-import ChatInterface from "./components/ChatInterface";
+import ChatInterface from './components/ChatInterface';
 export { ChatInterface };
