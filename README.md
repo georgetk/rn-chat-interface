@@ -2,6 +2,10 @@
 
 A Chat UI for React Native
 
+## Demo
+
+![DEMO](./demo.gif)
+
 ## Installation
 
 ```sh
