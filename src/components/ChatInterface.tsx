@@ -11,7 +11,6 @@ import {
 } from 'react-native';
 import MessageItem from './MessageItem';
 import SeparatorView from './SeparatorView';
-import CrossSVG from './CrossSVG';
 
 type ChatInterfaceProps = {
   title: string;
@@ -55,7 +54,6 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({
     >
       <View style={[styles.headerView, { backgroundColor: headerColor }]}>
         <Text style={styles.headerText}>{title}</Text>
-        <CrossSVG />
         <Button title="Close" onPress={onClose} />
       </View>
 

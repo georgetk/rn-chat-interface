@@ -5,27 +5,39 @@ A Chat UI for React Native
 ## Installation
 
 ```sh
-npm install rn-chat-interface
+yarn add rn-chat-interface
 ```
 
 ## Usage
 
 ```js
-import { multiply } from 'rn-chat-interface';
+import {ChatInterface} from 'rn-chat-interface';
 
 // ...
 
-const result = await multiply(3, 7);
+const App = () => {
+  const [visible, setVisible] = useState(true);
+
+  const closeChat = () => {
+    setVisible(false);
+  };
+
+  return (
+    <SafeAreaView style={{flex: 1}}>
+      <ChatInterface
+        isVisible={visible}
+        headerColor="cyan"
+        title="Chat"
+        onClose={closeChat}
+      />
+    </SafeAreaView>
+  );
+};
 ```
 
-## Contributing
+## Props
 
-See the [contributing guide](CONTRIBUTING.md) to learn how to contribute to the repository and the development workflow.
-
-## License
-
-MIT
-
----
-
-Made with [create-react-native-library](https://github.com/callstack/react-native-builder-bob)
+1. isVisible - Boolean value determines whether to show or not the component. Default is true.
+2. headerColor - Desired color of the top header.
+3. title - Text displayed in the top header.
+4. onClose - Expects a function that will be called upon pressing "Close".
