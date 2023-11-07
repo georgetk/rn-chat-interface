@@ -15,19 +15,20 @@ yarn add rn-chat-interface
 ## Usage
 
 ```js
-import {ChatInterface} from 'rn-chat-interface';
 
-// ...
+import * as React from 'react';
+import { SafeAreaView } from 'react-native';
+import { ChatInterface } from 'rn-chat-interface';
 
-const App = () => {
-  const [visible, setVisible] = useState(true);
+export default function App() {
+  const [visible, setVisible] = React.useState(true);
 
   const closeChat = () => {
     setVisible(false);
   };
 
   return (
-    <SafeAreaView style={{flex: 1}}>
+    <SafeAreaView style={{ flex: 1 }}>
       <ChatInterface
         isVisible={visible}
         headerColor="cyan"
@@ -36,7 +37,8 @@ const App = () => {
       />
     </SafeAreaView>
   );
-};
+}
+
 ```
 
 ## Props

@@ -1,31 +1,22 @@
 import * as React from 'react';
-
-import { StyleSheet, View, Text } from 'react-native';
-import { multiply } from 'rn-chat-interface';
+import { SafeAreaView } from 'react-native';
+import { ChatInterface } from 'rn-chat-interface';
 
 export default function App() {
-  const [result, setResult] = React.useState<number | undefined>();
+  const [visible, setVisible] = React.useState(true);
 
-  React.useEffect(() => {
-    multiply(3, 7).then(setResult);
-  }, []);
+  const closeChat = () => {
+    setVisible(false);
+  };
 
   return (
-    <View style={styles.container}>
-      <Text>Result: {result}</Text>
-    </View>
+    <SafeAreaView style={{ flex: 1 }}>
+      <ChatInterface
+        isVisible={visible}
+        headerColor="cyan"
+        title="Chat"
+        onClose={closeChat}
+      />
+    </SafeAreaView>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  box: {
-    width: 60,
-    height: 60,
-    marginVertical: 20,
-  },
-});

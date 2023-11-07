@@ -1,6 +1,6 @@
 {
   "name": "rn-chat-interface",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A Chat UI for React Native",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -72,9 +72,6 @@
   },
   "resolutions": {
     "@types/react": "17.0.21"
-  },
-  "dependencies": {
-    "react-native-svg": ">=13.14.0"
   },
   "peerDependencies": {
     "react": "*",
@@ -159,5 +156,8 @@
         }
       ]
     ]
+  },
+  "dependencies": {
+    "react-native-svg": "^13.14.0"
   }
 }
